@@ -3,7 +3,8 @@ Sri Lanka vehicle number validation using asp .net regular expressions
 Sumith Harshan
 */
 
-
+// METHOD -1 
+//***********************
 // In your Model file
 
 [Required(ErrorMessage = "Required")]
@@ -13,9 +14,17 @@ Sumith Harshan
 public string VehicleNumber { get; set; }
 
 
+// In your view file
+@Html.TextBoxFor(model => model.VehicleNumber, new { @class = "form-control"})
+@Html.ValidationMessageFor(model => model.VehicleNumber, null, new { @class = "text-danger" })
 
 
-/*
+
+
+
+// METHOD -2 
+//***********************
+     /*
 You can use the below method in your view file
 */
 <input class="form-control valid" 
